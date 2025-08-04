@@ -1,0 +1,27 @@
+def lecture(fichier : str)->int : 
+    """
+    Lit le contenu d'un fichier et dis au père noël la ou il doit aller pour livrer son cadeau
+    
+    :fichier : la chaine a lire
+    :return: l'etage ou il doit allé 
+    """
+    res =0 
+    for c in fichier:
+        if c == '(':
+            res += 1
+        elif c == ')':
+            res -= 1
+        
+    return res
+
+if __name__ == "__main__":
+    input("voulez vous utiliser un fichier ou entrer une chaine ? (f/chaine)")
+    if input() == 'f':
+        fichier = input("entrez le nom du fichier : ")
+        with open(fichier, 'r') as f:
+            contenu = f.read()
+            f.close()
+        print(lecture(contenu))
+    else:
+        chaine = input("entrez la chaine : ")
+        print(lecture(chaine))
