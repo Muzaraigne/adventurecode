@@ -1,0 +1,32 @@
+def listData(contenu):
+
+    contenu = contenu.split("\n")
+    res= []
+    for x in contenu:
+        x=x.split("x")
+        x = [int(i) for i in x]
+        res.append(x)
+
+    return res
+
+def aireBox(box):
+    l,w,h =box
+    return 2*l*w + 2*w*h + 2*h*l+min(l*w, w*h, h*l)
+    
+def perRub(box):
+    l,w,h =box
+    return 2*min(l+w, w+h, h+l) + l*w*h
+
+if __name__ == "__main__":
+    input = "instruction.txt"
+    resPap=0
+    resRub=0
+    with open(input, "r") as f:
+        contenu = f.read()
+        f.close()
+    for i in listData(contenu):
+        resPap+= aireBox(i)
+        resRub+= perRub(i)
+
+    print("Les elfes ont besoins de ",resPap,"pieds carrée de papiers cadeau.")
+    print("Les elfes ont besoins de ",resRub,"pieds de ruban.")
