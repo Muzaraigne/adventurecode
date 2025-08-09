@@ -1,0 +1,50 @@
+def hadCoord(chaine):
+    chaine = chaine.split(" ")
+    try:
+        coord1= [int(c) for c in chaine[1].split(",")]
+    except ValueError:
+        coord1 = [int(c) for c in chaine[2].split(",")]
+    coord2 = [int(c) for c in chaine[len(chaine) - 1].split(",")]
+
+    return (coord1, coord2)
+
+def toogle(coord1, coord2):
+    for i in range(coord1[0], coord2[0] + 1):
+        for j in range(coord1[1], coord2[1] + 1):
+            coords[i][j] = not coords[i][j]
+
+def turnOn(coord1, coord2):
+    for i in range(coord1[0], coord2[0] + 1):
+        for j in range(coord1[1], coord2[1] + 1):
+            coords[i][j] = True
+def turnOff(coord1, coord2):
+    for i in range(coord1[0], coord2[0] + 1):
+        for j in range(coord1[1], coord2[1] + 1):
+            coords[i][j] = False
+
+def countLights():
+    count = 0
+    for i in range(1000):
+        for j in range(1000):
+            if coords[i][j]:
+                count += 1
+    return count
+
+
+if __name__ == "__main__":
+    with open("input.txt", "r") as f:
+        lignes = f.readlines()
+
+    coords = [[False for _ in range(1000)] for _ in range(1000)]
+    for ligne in lignes:
+        if "toggle" in ligne:
+            coord1, coord2 = hadCoord(ligne)
+            toogle(coord1, coord2)
+        elif "on" in ligne:
+            coord1, coord2 = hadCoord(ligne)
+            turnOn(coord1, coord2)
+        elif "off" in ligne:
+            coord1, coord2 = hadCoord(ligne)
+            turnOff(coord1, coord2)
+
+    print("Nombre de lumières allumées :", countLights())
