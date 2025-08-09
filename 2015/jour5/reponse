@@ -21,19 +21,35 @@ def containsBadStrings(chaine):
             return True
     return False
 
+
 def is_nice_string(chaine):
     return (containsVoy(chaine) and containsDoubleLetter(chaine) and not containsBadStrings(chaine))
 
-def count_nice_strings(strings):
+def is_nice_String_2(chaine):
+    rule1 = False
+    rule2 = False
+    for i in range(len(chaine) - 2):
+        if chaine[i] == chaine[i + 2]:
+            rule2 = True
+        if chaine[i:i + 2] in chaine[i + 2:]:
+            rule1 = True
+        if rule1 and rule2:
+            return True
+    return False
+
+
+def count_nice_strings(strings,methode):
     count = 0
     for string in strings:
-        if is_nice_string(string):
+        if methode(string):
             count += 1
     return count
 
 if __name__ == "__main__":
     with open("input.txt", "r") as file:
         strings = file.read().splitlines()
-    
-    result = count_nice_strings(strings)
+
+    result = count_nice_strings(strings, is_nice_string)
+    result2 = count_nice_strings(strings, is_nice_String_2)
     print(f"Nombre de chaînes de caractères 'nice': {result}")
+    print(f"Nombre de chaînes de caractères 'nice' (méthode 2): {result2}")
