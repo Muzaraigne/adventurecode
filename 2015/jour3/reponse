@@ -1,0 +1,35 @@
+def changement (chaine):
+    res = []
+    for i in chaine:
+        if i == "^":
+            res.append((0,1))
+        elif i == "v":
+            res.append((0,-1))
+        elif i == ">":
+            res.append((1,0))
+        elif i == "<":
+            res.append((-1,0))
+    return res
+
+def sol (chaine):
+    dep = changement(chaine)
+    dicPos = {(0,0): 1}
+    actualPos = (0, 0)
+    for d in dep:
+        actualPos = (actualPos[0] + d[0], actualPos[1] + d[1])
+
+        if actualPos in dicPos:
+            dicPos[actualPos] += 1
+        else:
+            dicPos[actualPos] = 1
+    res = 0
+    for v in dicPos.values():
+        if v > 0:
+            res +=1
+    return res
+
+if __name__ == "__main__":
+    input = "instruction.txt"
+    with open(input, "r") as f:
+       instructions = f.read()
+    print(sol(instructions))
