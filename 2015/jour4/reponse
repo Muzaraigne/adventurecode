@@ -1,0 +1,21 @@
+from hashlib import md5
+
+print("Jour 4 - Réponse")
+
+def md5_hash(s):
+    return md5(s.encode()).hexdigest()
+
+def find_lowest_number(secret_key, leading_zeros):
+    number = 0
+    prefix = '0' * leading_zeros
+    while True:
+        hash_result = md5_hash(f"{secret_key}{number}")
+        if hash_result.startswith(prefix):
+            return number
+        number += 1
+if __name__ == "__main__":
+    secret_key = "yzbqklnj"
+    leading_zeros = 5  # For part 1, change to 6 for part 2
+    result = find_lowest_number(secret_key, leading_zeros)
+    print(f"Lowest number for {leading_zeros} leading zeros: {result}")
+    print(f"Lowest number for 6 leading zeros: {find_lowest_number(secret_key, 6)}")
