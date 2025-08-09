@@ -11,23 +11,23 @@ def hadCoord(chaine):
 def toogle(coord1, coord2):
     for i in range(coord1[0], coord2[0] + 1):
         for j in range(coord1[1], coord2[1] + 1):
-            coords[i][j] = not coords[i][j]
+            coords[i][j] += 2
 
 def turnOn(coord1, coord2):
     for i in range(coord1[0], coord2[0] + 1):
         for j in range(coord1[1], coord2[1] + 1):
-            coords[i][j] = True
+            coords[i][j] += 1 
+
 def turnOff(coord1, coord2):
     for i in range(coord1[0], coord2[0] + 1):
         for j in range(coord1[1], coord2[1] + 1):
-            coords[i][j] = False
+            coords[i][j] -= 1 if coords[i][j] > 0 else 0
 
 def countLights():
     count = 0
     for i in range(1000):
         for j in range(1000):
-            if coords[i][j]:
-                count += 1
+            count += coords[i][j]
     return count
 
 
@@ -35,7 +35,7 @@ if __name__ == "__main__":
     with open("input.txt", "r") as f:
         lignes = f.readlines()
 
-    coords = [[False for _ in range(1000)] for _ in range(1000)]
+    coords = [[0 for _ in range(1000)] for _ in range(1000)]
     for ligne in lignes:
         if "toggle" in ligne:
             coord1, coord2 = hadCoord(ligne)
