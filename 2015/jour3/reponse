@@ -14,9 +14,15 @@ def changement (chaine):
 def sol (chaine):
     dep = changement(chaine)
     dicPos = {(0,0): 1}
-    actualPos = (0, 0)
-    for d in dep:
-        actualPos = (actualPos[0] + d[0], actualPos[1] + d[1])
+    actualPosP = (0, 0)
+    actualPosR = (0, 0)
+    for i in range(0, len(dep) ):
+        if i % 2 == 0:
+            actualPosP = (actualPosP[0] + dep[i][0], actualPosP[1] + dep[i][1])
+            actualPos = actualPosP
+        else:
+            actualPosR = (actualPosR[0] + dep[i][0], actualPosR[1] + dep[i][1])
+            actualPos = actualPosR
 
         if actualPos in dicPos:
             dicPos[actualPos] += 1
