@@ -1,0 +1,39 @@
+def containsVoy(chaine):
+    voyelles = "aeiou"
+    r= 0
+    for lettre in chaine:
+        if lettre in voyelles:
+            r += 1
+            if r >= 3:
+                return True
+    return False
+
+def containsDoubleLetter(chaine):
+    for i in range(len(chaine) - 1):
+        if chaine[i] == chaine[i + 1]:
+            return True
+    return False
+
+def containsBadStrings(chaine):
+    bad_strings = ["ab", "cd", "pq", "xy"]
+    for bad in bad_strings:
+        if bad in chaine:
+            return True
+    return False
+
+def is_nice_string(chaine):
+    return (containsVoy(chaine) and containsDoubleLetter(chaine) and not containsBadStrings(chaine))
+
+def count_nice_strings(strings):
+    count = 0
+    for string in strings:
+        if is_nice_string(string):
+            count += 1
+    return count
+
+if __name__ == "__main__":
+    with open("input.txt", "r") as file:
+        strings = file.read().splitlines()
+    
+    result = count_nice_strings(strings)
+    print(f"Nombre de chaînes de caractères 'nice': {result}")
