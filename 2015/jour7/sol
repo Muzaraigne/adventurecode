@@ -1,0 +1,109 @@
+def solve_aoc_2015_day7_part1(instructions):
+    wires = {}
+    
+    # On stocke les instructions qui restent à exécuter
+    unresolved_instructions = list(instructions) 
+
+    while unresolved_instructions:
+        newly_resolved_instructions = []
+        
+        for instruction in unresolved_instructions:
+            parts = instruction.strip().split()
+            
+            # Cas d'une assignation simple (e.g., '123 -> x')
+            if len(parts) == 3:
+                value_or_wire = parts[0]
+                output_wire = parts[2]
+                
+                if value_or_wire.isdigit():
+                    wires[output_wire] = int(value_or_wire)
+                    newly_resolved_instructions.append(instruction)
+                elif value_or_wire in wires:
+                    wires[output_wire] = wires[value_or_wire]
+                    newly_resolved_instructions.append(instruction)
+            
+            # Cas d'une opération binaire (e.g., 'x AND y -> z')
+            elif len(parts) == 5:
+                input1 = parts[0]
+                op = parts[1]
+                input2 = parts[2]
+                output_wire = parts[4]
+                
+                val1 = None
+                val2 = None
+
+                # On vérifie si les entrées sont des nombres ou des fils déjà résolus
+                if input1.isdigit():
+                    val1 = int(input1)
+                elif input1 in wires:
+                    val1 = wires[input1]
+
+                if input2.isdigit():
+                    val2 = int(input2)
+                elif input2 in wires:
+                    val2 = wires[input2]
+                
+                if val1 is not None and val2 is not None:
+                    if op == 'AND':
+                        wires[output_wire] = val1 & val2
+                    elif op == 'OR':
+                        wires[output_wire] = val1 | val2
+                    elif op == 'LSHIFT':
+                        wires[output_wire] = val1 << val2
+                    elif op == 'RSHIFT':
+                        wires[output_wire] = val1 >> val2
+                    
+                    newly_resolved_instructions.append(instruction)
+            
+            # Cas d'une opération unaire (e.g., 'NOT x -> y')
+            elif len(parts) == 4:
+                op = parts[0]
+                input1 = parts[1]
+                output_wire = parts[3]
+                
+                val1 = None
+                if input1.isdigit():
+                    val1 = int(input1)
+                elif input1 in wires:
+                    val1 = wires[input1]
+
+                if val1 is not None:
+                    if op == 'NOT':
+                        # L'opération NOT est sur 16 bits (65535)
+                        wires[output_wire] = ~val1 & 0xFFFF
+                    
+                    newly_resolved_instructions.append(instruction)
+
+        # On retire les instructions résolues de la liste
+        for resolved in newly_resolved_instructions:
+            unresolved_instructions.remove(resolved)
+            
+    return wires.get('a')
+
+# Exemple d'utilisation avec les données de l'énoncé
+# Il faudrait lire votre fichier d'entrée ici
+instructions_initiales = open("input.txt").read().splitlines()
+
+
+# Étape 1: Solution de la partie 1
+# Remplacez cela par votre propre fonction ou exécutez le code de la partie 1
+# pour obtenir la valeur_a_partie1
+valeur_a_partie1 = solve_aoc_2015_day7_part1(instructions_initiales)
+
+# Étape 2: Modifier les instructions pour la partie 2
+instructions_part2 = []
+for instruction in instructions_initiales:
+    # On cherche l'instruction qui définit le fil 'b'
+    if instruction.strip().endswith(' -> b'):
+        # On remplace l'instruction de 'b' par notre nouvelle valeur
+        instructions_part2.append(f'{valeur_a_partie1} -> b')
+    else:
+        # On garde les autres instructions inchangées
+        instructions_part2.append(instruction)
+
+# Étape 3 & 4: Exécuter à nouveau le solveur
+# On utilise la même fonction de résolution mais avec le nouvel ensemble d'instructions
+resultat_part2 = solve_aoc_2015_day7_part1(instructions_part2)
+
+print(f"La valeur du fil 'a' pour la partie 1 est : {valeur_a_partie1}")
+print(f"La nouvelle valeur du fil 'a' pour la partie 2 est : {resultat_part2}")
