@@ -32,7 +32,7 @@ def countLights():
 
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as f:
+    with open("2015/jour6/input.txt", "r") as f:
         lignes = f.readlines()
 
     coords = [[0 for _ in range(1000)] for _ in range(1000)]

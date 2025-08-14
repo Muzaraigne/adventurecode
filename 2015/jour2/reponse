@@ -18,7 +18,7 @@ def perRub(box):
     return 2*min(l+w, w+h, h+l) + l*w*h
 
 if __name__ == "__main__":
-    input = "instruction.txt"
+    input = "2015/jour2/instruction.txt"
     resPap=0
     resRub=0
     with open(input, "r") as f:

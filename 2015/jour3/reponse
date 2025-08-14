@@ -35,7 +35,7 @@ def sol (chaine):
     return res
 
 if __name__ == "__main__":
-    input = "instruction.txt"
+    input = "2015/jour3/instruction.txt"
     with open(input, "r") as f:
        instructions = f.read()
     print(sol(instructions))

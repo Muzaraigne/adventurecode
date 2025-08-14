@@ -82,8 +82,7 @@ def solve_aoc_2015_day7_part1(instructions):
 
 # Exemple d'utilisation avec les données de l'énoncé
 # Il faudrait lire votre fichier d'entrée ici
-instructions_initiales = open("input.txt").read().splitlines()
-
+instructions_initiales = open("2015/jour7/input.txt").read().splitlines()
 
 # Étape 1: Solution de la partie 1
 # Remplacez cela par votre propre fonction ou exécutez le code de la partie 1

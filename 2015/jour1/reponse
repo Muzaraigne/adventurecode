@@ -38,15 +38,10 @@ def lecture2(fichier : str)->int :
     return -1
 
 if __name__ == "__main__":
-    input("voulez vous utiliser un fichier ou entrer une chaine ? (f/chaine)")
-    if input() == 'f':
-        fichier = input("entrez le nom du fichier : ")
-        with open(fichier, 'r') as f:
-            contenu = f.read()
-            f.close()
-        print("le pére noel arrive au ",lecture(contenu))
-        print("le pére noel est tombé dans le sous-sol au ",lecture2(contenu),"ème personne") 
-    else:
-        chaine = input("entrez la chaine : ")
-        print("le pére noel arrive au ",lecture(chaine))
-        print("le pére noel est tombé dans le sous-sol au ",lecture2(chaine),"ème personne")
+
+    with open("2015/jour1/instruction.txt", 'r') as f:
+        contenu = f.read()
+        f.close()
+    print("le pére noel arrive au ",lecture(contenu))
+    print("le pére noel est tombé dans le sous-sol au ",lecture2(contenu),"ème personne") 
+   

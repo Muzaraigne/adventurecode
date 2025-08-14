@@ -46,7 +46,7 @@ def count_nice_strings(strings,methode):
     return count
 
 if __name__ == "__main__":
-    with open("input.txt", "r") as file:
+    with open("2015/jour5/input.txt", "r") as file:
         strings = file.read().splitlines()
 
     result = count_nice_strings(strings, is_nice_string)
