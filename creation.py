@@ -25,10 +25,6 @@ if __name__ == "__main__":
             break
         except ValueError:
             print("it's not a year")
-            with open("sol.py","w") as f :
-                f.write('# -*- coding: utf-8 -*- \n')
-                f.write('if __name__ == "__main__" : \n')
-                f.write('   print("enigme pas encore traiter") \n')
-
+            
     
     
