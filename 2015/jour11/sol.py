@@ -1,6 +1,5 @@
 # -*- coding: utf-8 -*- 
 
-from pickletools import read_uint1
 
 def contient_sequence_croissante(mot):
     """
