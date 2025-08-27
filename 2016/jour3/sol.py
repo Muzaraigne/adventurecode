@@ -1,6 +1,4 @@
 # -*- coding: utf-8 -*- 
-import re
-
 
 def valid_triangles(sides) : 
     a,b,c = sorted(sides) 
