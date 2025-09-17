@@ -67,13 +67,13 @@ def test():
 def parse_input(filepath):
     with open(filepath, "r", encoding="utf-8") as f:
         return [line.strip().split() for line in f.readlines() if line.strip()]
-
+registre = {'a': 0, 'b': 0, 'c': 0, 'd': 0}
 if __name__ == "__main__":
     print("--- 🧠 Advent of Code 2016 - Jour 12 ---")
     print("--- Test interne ---")
     test()
     data = parse_input(".\\2016\\jour12\\input.txt")
-    registre = {'a': 0, 'b': 0, 'c': 0, 'd': 0}
+    
     
     result = calcule(data, registre.copy())
     print("Partie 1 : Le registre 'a' vaut", result['a'])
