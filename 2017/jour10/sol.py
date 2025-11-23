@@ -37,16 +37,15 @@ def xor_li(liste):
     return res
 
 def hashage_dense(data):
-    # 1. Obtenir le "Sparse Hash" (liste de 256)
+    data = [ord(c) for c in data] + [17,31,73,47,23]
+
     li = calcul_part2(data.copy())
 
-    # 2. Créer le "Dense Hash" (liste de 16) en appliquant le XOR
     dense_hash_dec = []
     for i in range(16):
         bloc = li[i*16:(i+1)*16]
         dense_hash_dec.append(xor_li(bloc))
 
-    # 3. Formater en chaîne hexadécimale de 32 caractères
     return ''.join(f'{n:02x}' for n in dense_hash_dec)
 
 def test():
@@ -66,8 +65,7 @@ def test():
     
     print("\n--- Tests Part 2 ---")
     for input_str, expected in test_data:
-        data_part2_test = [ord(c) for c in input_str] + [17,31,73,47,23]
-        result = hashage_dense(data_part2_test)
+        result = hashage_dense(input_str)
         print(f"Input: '{input_str}' -> {result} (Attendu: {expected}) {'✅' if result == expected else '❌'}")
 
 if __name__ == "__main__":
@@ -83,6 +81,6 @@ if __name__ == "__main__":
     print(f'\nPartie 1 : Le produit des deux premiers nombres de la liste est {res_part1}')
 
     # Partie 2
-    data_part2 = [ord(c) for c in data] + [17,31,73,47,23]
-    res_part2 = hashage_dense(data_part2)
+    
+    res_part2 = hashage_dense(data)
     print(f'Partie 2 : Le Knot Hash final est {res_part2}')
