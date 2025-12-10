@@ -111,3 +111,4 @@ if __name__ == "__main__" :
     
     result2 = part2(data)
     print(f"Partie 2 (nombre d'envois du programme 1): {result2}") 
+
