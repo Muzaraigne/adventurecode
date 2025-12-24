@@ -38,14 +38,13 @@ def create_loop(year):
             "# -*- coding: utf-8 -*-\n"
             "import os\n\n"
             "if __name__ == '__main__':\n"
-            f"    print('--- Jour {i} : Solution ---')\n"
-            "    input_path = os.path.join(os.path.dirname(__file__), 'input.txt')\n"
-            "    with open(input_path, 'r', encoding='utf-8') as f:\n"
-            "        data = f.read().splitlines()\n"
-            "    # TODO: implémenter la solution\n"
+            f"\tprint('--- Jour {i} : Solution ---')\n"
+            "\tinput_path = os.path.join(os.path.dirname(__file__), 'input.txt')\n"
+            "\twith open(input_path, 'r', encoding='utf-8') as f:\n"
+            "\t\tdata = f.read().splitlines()\n"
         )
         _safe_write(sol_path, sol_content)
-        
+
 if __name__ == "__main__":
     while True:
         try:
