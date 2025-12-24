@@ -1,5 +1,7 @@
 # -*- coding: utf-8 -*- 
-if __name__ == "__main__" : 
-  print("--- Jour 21 : Solution ---") 
-  with open(".\\2017\\jour21\\input.txt","r") as f : 
+import os
+if __name__ == "__main__" :
+  print("--- Jour 21 : Solution ---")
+  input_path = os.path.join(os.path.dirname(__file__), 'input.txt')
+  with open(input_path, 'r', encoding='utf-8') as f:
        data = f.read().splitlines() 
