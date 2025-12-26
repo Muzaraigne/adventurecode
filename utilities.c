@@ -26,13 +26,13 @@ char* read_file(const char* filename) {
     }
 
     size_t read_length = fread(buffer, 1, length, file);
-    if (read_length != length) {
+    if (ferror(file)) {
         fprintf(stderr, "Erreur de lecture du fichier %s.\n", filename);
         free(buffer);
         fclose(file);
         exit(EXIT_FAILURE);
     }
-    buffer[length] = '\0';
+    buffer[read_length] = '\0';
 
     fclose(file);
     return buffer;
