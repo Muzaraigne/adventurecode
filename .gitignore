@@ -1,5 +1,6 @@
 /.venv/
 /cmake-build-debug/
+/.idea/
 
 # Fichiers objets
 *.o
