@@ -1,0 +1,10 @@
+/.venv/
+/cmake-build-debug/
+
+# Fichiers objets
+*.o
+*.obj
+
+# Exécutables
+*.exe
+*.out
