@@ -9,3 +9,4 @@
 # Exécutables
 *.exe
 *.out
+/cmake-build-debug-event-trace/
