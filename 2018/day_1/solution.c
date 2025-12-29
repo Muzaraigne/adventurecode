@@ -61,7 +61,7 @@ void set_free(HashSet* set) {
 int sum(char** lines) {
     int total = 0;
     for (int i = 0; lines[i] != NULL; i++) {
-        total += atoi(lines[i]);
+        total +=strtol(lines[i], NULL, 10);
     }
     return total;
 }
@@ -78,7 +78,7 @@ int part2(char** lines) {
 
     while (1) { // Boucle infinie jusqu'à trouver le doublon
         for (int i = 0; lines[i] != NULL; i++) {
-            frequency += atoi(lines[i]);
+            frequency += strtol(lines[i], NULL, 10);
 
             // Vérification instantanée (O(1))
             if (set_contains(seen_frequencies, frequency)) {
