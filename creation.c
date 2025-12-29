@@ -59,13 +59,13 @@ void create_loop(int n) {
         "#include \"../../utilities.h\"\n"
         "\n"
         "int main(void) {\n"
-        "\tchar** input = extractLines(\"input.txt\");\n"
+        "\t char** input = extractLines(\"input.txt\");\n"
         "\tif (input == NULL) return EXIT_FAILURE;\n"
         "\n"
         "\t// Ton code ici\n"
         "\n"
-        "\tfree_lines(input);\n"
-        "\treturn 0;\n"
+        "\t free_lines(input);\n"
+        "\t return 0;\n"
         "}\n");
     fclose(file2);
 }
