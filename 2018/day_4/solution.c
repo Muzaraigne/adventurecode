@@ -99,10 +99,11 @@ int solve_part2(guard *guards, int guard_count) {
 }
 
 int main(void) {
-    char** input = extractLines("input.txt");
+    int size = 0;
+    char** input = extractLines("input.txt",&size);
     if (input == NULL) return EXIT_FAILURE;
 
-    int size = 0;
+
     for (int i = 0 ; input[i] != NULL ; i++) size++;
     qsort(input, size, sizeof(char*), comparer);
 

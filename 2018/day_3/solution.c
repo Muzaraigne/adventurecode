@@ -67,7 +67,7 @@ void solve(char** lines, result* result) {
 }
 
 int main(void) {
-    char** input = extractLines("input.txt");
+    char** input = extractLines("input.txt",NULL);
     if (input == NULL) return EXIT_FAILURE;
     result res = {0};
 

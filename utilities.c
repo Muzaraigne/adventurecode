@@ -1,11 +1,7 @@
-//
-// Created by Louis on 26/12/2025.
-//
 #include "utilities.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
 
 char* read_file(const char* filename) {
     FILE* file = fopen(filename, "r");
@@ -54,30 +50,39 @@ char* my_strsep(char** stringp, const char* delim) {
 
     return start;
 }
-char** extractLines(const char* filename) {
+
+// Modification : Retourne le tableau (char**) et remplit le compteur via un pointeur (int*)
+char** extractLines(const char* filename, int* count) {
     char* full_content = read_file(filename);
     char* cursor = full_content;
+
+    int local_count = 0;
     char** lines = NULL;
-    size_t count = 0;
 
     while (1) {
         char* line = my_strsep(&cursor, "\n");
         if (line == NULL) break;
 
-
-        char** tmp = realloc(lines, sizeof(char*) * (count + 2));
+        // Réallocation du tableau de pointeurs
+        char** tmp = realloc(lines, sizeof(char*) * (local_count + 2));
         if (tmp == NULL) {
             free(full_content);
-            return lines;
+            // En cas d'erreur, on pourrait free(lines) ici
+            return NULL;
         }
         lines = tmp;
 
-        lines[count] = strdup(line);
-        count++;
-        lines[count] = NULL;
+        lines[local_count] = strdup(line);
+        local_count++;
+        lines[local_count] = NULL; // Toujours terminer par NULL par sécurité
     }
 
-    free(full_content); // On peut maintenant libérer le buffer global
+    free(full_content);
+
+    if (count != NULL) {
+        *count = local_count;
+    }
+
     return lines;
 }
 
@@ -85,7 +90,7 @@ void free_lines(char** lines) {
     if (lines == NULL) return;
 
     for (int i = 0; lines[i] != NULL; i++) {
-        free(lines[i]); // Libère chaque chaîne de caractères (allouée par strdup)
+        free(lines[i]);
     }
-    free(lines); // Libère le tableau de pointeurs lui-même (alloué par realloc)
+    free(lines);
 }

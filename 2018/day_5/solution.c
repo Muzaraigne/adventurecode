@@ -61,7 +61,7 @@ int solve_part2(const char* line) {
     return min_length;
 }
 int main(void) {
-	char** input = extractLines("input.txt");
+	char** input = extractLines("input.txt",NULL);
 	if (input == NULL) return EXIT_FAILURE;
     const char * line = input[0];
     char* input_test = "dabAcCaCBAcCcaDA";

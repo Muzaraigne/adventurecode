@@ -93,7 +93,7 @@ int part2(char** lines) {
 }
 
 int main(void) {
-    char** input = extractLines("input.txt");
+    char** input = extractLines("input.txt",NULL);
     if (input == NULL) return EXIT_FAILURE;
 
     char* test_input[] = {"+1", "-2", "+3", "+1", NULL};

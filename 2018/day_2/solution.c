@@ -63,7 +63,7 @@ char* solve_part_2(char** input) {
 }
 
 int main(void) {
-    char** input = extractLines("input.txt");
+    char** input = extractLines("input.txt",NULL);
     if (input == NULL) return EXIT_FAILURE;
 
     char* input_test[] = {
