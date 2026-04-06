@@ -1,0 +1,54 @@
+"C:\Program Files\JetBrains\CLion 2025.2.1\bin\cmake\win\x64\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug "-DCMAKE_MAKE_PROGRAM=C:/Program Files/JetBrains/CLion 2025.2.1/bin/ninja/win/x64/ninja.exe" --profiling-format=google-trace --profiling-output=CMakeFiles\clion-event-trace.json -G Ninja -S C:\Users\Louis.INFRAGOLLIOT\Documents\adventurecode -B C:\Users\Louis.INFRAGOLLIOT\Documents\adventurecode\cmake-build-debug-event-trace
+-- Ajout de l'exécutable : solution_2018_day1
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day2
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day3
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day4
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day5
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day6
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day7
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day8
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day9
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day10
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day11
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day12
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day13
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day14
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day15
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day16
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day17
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day18
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day19
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day20
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day21
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day22
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day23
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day24
+--   -> Configuration de la copie automatique de input.txt
+-- Ajout de l'exécutable : solution_2018_day25
+--   -> Configuration de la copie automatique de input.txt
+-- Configuring done (0.3s)
+-- Generating done (0.0s)
+-- Build files have been written to: C:/Users/Louis.INFRAGOLLIOT/Documents/adventurecode/cmake-build-debug-event-trace

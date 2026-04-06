@@ -1,0 +1,276 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-d0094a50bb2071803777.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.20"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "AdventureCode",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11,
+						12,
+						13,
+						14,
+						15,
+						16,
+						17,
+						18,
+						19,
+						20,
+						21,
+						22,
+						23,
+						24
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day1::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day1-Debug-30cd3a280c2894cd70cb.json",
+					"name" : "solution_2018_day1",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day10::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day10-Debug-4b50eadb0d54085e8ef1.json",
+					"name" : "solution_2018_day10",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day11::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day11-Debug-a305a7ea55132b08869f.json",
+					"name" : "solution_2018_day11",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day12::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day12-Debug-dec8d80a73e12396514b.json",
+					"name" : "solution_2018_day12",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day13::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day13-Debug-706a792dc95d8c505c84.json",
+					"name" : "solution_2018_day13",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day14::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day14-Debug-73da5b18757594d19a8d.json",
+					"name" : "solution_2018_day14",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day15::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day15-Debug-113cf5cc00d5552d9746.json",
+					"name" : "solution_2018_day15",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day16::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day16-Debug-46ca2058072e7a2bf546.json",
+					"name" : "solution_2018_day16",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day17::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day17-Debug-611efb5970f04c3059d0.json",
+					"name" : "solution_2018_day17",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day18::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day18-Debug-9d8036443c73d848caf7.json",
+					"name" : "solution_2018_day18",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day19::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day19-Debug-6365859ef44a8d09d633.json",
+					"name" : "solution_2018_day19",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day2::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day2-Debug-27dd4f5f5a33408d34fa.json",
+					"name" : "solution_2018_day2",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day20::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day20-Debug-c15df2552f21caa334b2.json",
+					"name" : "solution_2018_day20",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day21::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day21-Debug-1fd1ca8e2582a7a3fbbc.json",
+					"name" : "solution_2018_day21",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day22::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day22-Debug-b04bfc0abd81a11f4b69.json",
+					"name" : "solution_2018_day22",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day23::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day23-Debug-581b4c9d9b32490c4209.json",
+					"name" : "solution_2018_day23",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day24::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day24-Debug-627f077ed189c4804811.json",
+					"name" : "solution_2018_day24",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day25::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day25-Debug-a01143de81676b4d2a47.json",
+					"name" : "solution_2018_day25",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day3-Debug-dba84e881c98006d99e2.json",
+					"name" : "solution_2018_day3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day4::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day4-Debug-f148297a78710dbbb9bf.json",
+					"name" : "solution_2018_day4",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day5::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day5-Debug-5e58a8b8643870159ea0.json",
+					"name" : "solution_2018_day5",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day6::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day6-Debug-1e26749b11d7fe028cac.json",
+					"name" : "solution_2018_day6",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day7::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day7-Debug-b487ddbb8472134e4911.json",
+					"name" : "solution_2018_day7",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day8::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day8-Debug-e3bff67d45a86c730fb3.json",
+					"name" : "solution_2018_day8",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "solution_2018_day9::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-solution_2018_day9-Debug-83d09feb6c22ad978aa1.json",
+					"name" : "solution_2018_day9",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Louis.INFRAGOLLIOT/Documents/adventurecode/cmake-build-debug-event-trace",
+		"source" : "C:/Users/Louis.INFRAGOLLIOT/Documents/adventurecode"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 8
+	}
+}
