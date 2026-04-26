@@ -2,17 +2,14 @@ cmake_minimum_required(VERSION 3.20)
 project(AdventureCode C)
 
 # --- Configuration du compilateur ---
-# Utilisation de C11 avec extensions (équivalent à -std=gnu11)
-# Cela corrige les warnings/erreurs sur strdup
 set(CMAKE_C_STANDARD 11)
 set(CMAKE_C_STANDARD_REQUIRED ON)
 set(CMAKE_C_EXTENSIONS ON)
 
-# Inclure le dossier racine pour que les #include "utilities.h" fonctionnent
-include_directories(${CMAKE_SOURCE_DIR})
-
-# Fichiers sources communs à tous les jours
-set(COMMON_SOURCES utilities.c)
+# Sources communes à tous les jours
+set(COMMON_SOURCES
+    utilities.c
+)
 
 # --- Macro pour ajouter facilement un jour ---
 # Usage : add_day(2018 1)
@@ -23,7 +20,25 @@ macro(add_day year day)
     set(INPUT_FILE "${DAY_DIR}/input.txt")
 
     if(EXISTS "${CMAKE_SOURCE_DIR}/${SOURCE_FILE}")
-        add_executable(${TARGET_NAME} ${SOURCE_FILE} ${COMMON_SOURCES})
+        set(EXTRA_SOURCES "")
+
+        # Day 16 utilise aussi registerOperation.c
+        if(${year} EQUAL 2018 AND (${day} EQUAL 16 OR ${day} EQUAL 19))
+            list(APPEND EXTRA_SOURCES 2018/enigmeUtilities/registerOperation.c)
+        endif()
+
+        add_executable(${TARGET_NAME}
+            ${SOURCE_FILE}
+            ${COMMON_SOURCES}
+            ${EXTRA_SOURCES}
+        )
+
+        # Includes globaux utiles au projet
+        target_include_directories(${TARGET_NAME} PRIVATE
+            ${CMAKE_SOURCE_DIR}
+            ${CMAKE_SOURCE_DIR}/2018/enigmeUtilities
+        )
+
         message(STATUS "Ajout de l'exécutable : ${TARGET_NAME}")
 
         # Si un fichier input.txt existe, on le copie à côté de l'exécutable généré
@@ -41,7 +56,6 @@ macro(add_day year day)
 endmacro()
 
 # --- Liste des jours ---
-# Ajoutez une ligne ici pour chaque nouveau jour que vous résolvez
 add_day(2018 1)
 add_day(2018 2)
 add_day(2018 3)
