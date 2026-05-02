@@ -22,10 +22,9 @@ macro(add_day year day)
     if(EXISTS "${CMAKE_SOURCE_DIR}/${SOURCE_FILE}")
         set(EXTRA_SOURCES "")
 
-        # Day 16 utilise aussi registerOperation.c
-        if(${year} EQUAL 2018 AND (${day} EQUAL 16 OR ${day} EQUAL 19))
-            list(APPEND EXTRA_SOURCES 2018/enigmeUtilities/registerOperation.c)
-        endif()
+
+        list(APPEND EXTRA_SOURCES 2018/enigmeUtilities/registerOperation.c)
+
 
         add_executable(${TARGET_NAME}
             ${SOURCE_FILE}
