@@ -2,7 +2,7 @@ package org.example.years.y2019;
 
 import org.example.core.Day;
 
-public class Day1 implements Day {
+public class Day01 implements Day {
 
     @Override
     public Integer partOne(String input) {

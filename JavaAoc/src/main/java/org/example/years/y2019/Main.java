@@ -15,6 +15,6 @@ public class Main {
 
 
         SolutionRunner runner = new SolutionRunner(cookie);
-        runner.run(new Day1());
+        runner.run(new Day01());
     }
 }
