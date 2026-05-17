@@ -2,9 +2,12 @@ package org.example.years.y2019;
 
 import org.example.core.Day;
 
-public class Day01 implements Day {
+public class Day01 extends Day {
 
-    @Override
+    public Day01(){
+        super(1,2019);
+    }
+
     public Integer partOne(String input) {
         String[] list = input.split("\n");
         int sum = 0;
@@ -16,7 +19,7 @@ public class Day01 implements Day {
         return sum;
     }
 
-    @Override
+
     public Integer partTwo(String input) {
         String[] list = input.split("\n");
         int sum = 0;
@@ -26,16 +29,6 @@ public class Day01 implements Day {
             i++;
         }
         return sum;
-    }
-
-    @Override
-    public int getDay() {
-        return 1;
-    }
-
-    @Override
-    public int getYear() {
-        return 2019;
     }
 
     private int fuelNeeded(int n){

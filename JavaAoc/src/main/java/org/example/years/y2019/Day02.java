@@ -5,9 +5,11 @@ import java.util.ArrayList;
 import org.example.core.Day;
 
 
-public class Day02 implements Day {
+public class Day02 extends Day {
     
-    @Override
+    Day02(){
+		super(2,2019);
+	}
     public Integer partOne(String input) {
       ArrayList<Integer> op = parse(input);
       op.set(1, 12);
@@ -44,7 +46,7 @@ public class Day02 implements Day {
 			}
 	}
 
-    @Override
+
     public Integer partTwo(String input) {
     	int obj = 19690720;
     	for(int i = 0;i<99;i++) {
@@ -61,15 +63,7 @@ public class Day02 implements Day {
       return 0;
     }
 
-    @Override
-    public int getDay() {
-        return 2;
-    }
 
-    @Override
-    public int getYear() {
-        return 2019;
-    }
 
 
 }
